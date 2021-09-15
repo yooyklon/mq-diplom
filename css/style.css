@@ -571,9 +571,13 @@ body {
   margin-bottom: 21px;
 }
 
-.products-item-text span {
+.products-item-text a {
   color: #b59f5b;
   cursor: pointer;
+}
+
+.products-item-text a:hover {
+  text-decoration: underline;
 }
 
 .products-item-text span:hover {
