@@ -55,6 +55,14 @@ body {
   line-height: 22px;
 }
 
+.element-invisible {
+  position: absolute !important;
+  height: 1px; width: 1px; 
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .title {
   position: relative;
   font-size: 20px;
@@ -126,12 +134,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 105px;
+  height: 41px;
+  margin-bottom: 105px;
 }
 
 .logo {
   width: 179px;
-  height: 41px;
 } 
 
 .logo-img {
@@ -264,7 +272,13 @@ body {
   width: 47.7%;
   height: 294px;
   margin-right: 29px;
-  background: center center/cover no-repeat;
+}
+
+.blog-item-img img {
+  width: 100%;
+  height: 294px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .blog-item article {
@@ -276,6 +290,7 @@ body {
 }
 
 .blog-item-them {
+  display: flex;
   margin-bottom: 8px;
   line-height: 1;
 }
@@ -367,7 +382,10 @@ body {
 }
 
 .search {
-  padding-top: 38px;
+  margin-top: 60px;
+}
+
+.search-label {
   display: flex;
 }
 
@@ -389,6 +407,9 @@ body {
   width: 48px;
   height: 48px;
   background-color: #b59f5b;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center center;
   border: none;
   cursor: pointer;
   transition: all 0.4s;
@@ -398,13 +419,8 @@ body {
   background-color: #000000;
 }
 
-.search-btn-img {
-  width: 18px;
-  height: 18px;
-}
-
 .mail {
-  padding-top: 61px;
+  margin-top: 61px;
 }
 
 .mail-title {
@@ -444,7 +460,7 @@ body {
 } 
 
 .tags {
-  padding-top: 61px;
+  margin-top: 61px;
 }
 
 .tags-title {
@@ -469,7 +485,7 @@ body {
 }
 
 .topic {
-  padding-top: 53px;
+  margin-top: 53px;
 }
 
 .topic-title {
@@ -477,6 +493,7 @@ body {
 }
 
 .topic-list-item {
+  display: flex;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -489,8 +506,12 @@ body {
   line-height: 1;
 }
 
-.topic-list-link sup {
+.topic-list-item span {
+  margin-top: 13px;
   margin-left: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
   color: #b59f5b;
 }
 
@@ -601,6 +622,10 @@ body {
   background-color: #000000;
 }
 
+.footer {
+  padding-bottom: 49px;
+}
+
 .footer-social-list {
   display: flex;
   justify-content: center;
@@ -621,7 +646,7 @@ body {
 }
 
 .footer-copy {
-  padding: 64px 0 49px;
+  margin-top: 64px;
   font-size: 12px;
   font-weight: 700;
   color: #999999;
