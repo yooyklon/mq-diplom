@@ -276,7 +276,7 @@ body {
 
 .blog-item-img img {
   width: 100%;
-  height: 294px;
+  height: 100%;
   object-fit: cover;
   object-position: center center;
 }
